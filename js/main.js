@@ -1,3 +1,7 @@
+
+// The Trial Variable, which will store data for 1 user
+// We will adjust these parameters based on how much information we wish to record
+// per user, including question correctness, recall time, repsonse time, etc.
 var trial =
 {
 	'sessionID': (Math.ceil(Math.random() * 900000000 + 100000000)),
@@ -15,10 +19,14 @@ var trial =
 	'write': true
 }
 
+
+// Initialize the database
 var database = firebase.database();
 
 var d = new Date();
 
+
+// Write to the database (in line with whatever we decide on above)
 function writeUserData(input) {
 	 firebase.database().ref('users/' + input.sessionID + '/' + input.start).set({
 		choice: input.choice,
@@ -30,7 +38,7 @@ function writeUserData(input) {
 	  	});
 	}
 
-
+// FRONT END
 $('document').ready(function(){
 
 	$('#next').click(function(){
@@ -75,6 +83,8 @@ $('document').ready(function(){
 	More information on https://firebase.google.com/docs/database/web/read-and-write
 	*/
 })
+
+/* LEFT OVER FROM GENERATING A RANDOM IMAGE. COULD BE USED FOR RANDOM QUESTION
 function randomImg(){
     var randomNumber = Math.floor(Math.random() * 11) + 1;
     trial.face = randomNumber ;
@@ -86,12 +96,7 @@ function randomImg(){
     var imgName2 = "City" + randomNumber2 + ".jpg";
     document.getElementById("bg").src= "./images/" + imgName2 ;
  }
-
-/* here be the mouse tracking*
-pageX gets mouse position from leftmost edge of window, pageY does the same from the top. 
-Basically as long as there's a window open, this will be looking for mouse movement and send coordinates to console
-if(timer.stage1 && !timer.stage2 makes sure that we only record mouse movements in between the button press of NEXT to the hover
-selection to only see the selection path and reduce noise.*/
+*/
 
  function handler(e) {
 	if(trial.stage1 && !trial.stage2){
