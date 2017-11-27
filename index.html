@@ -1,59 +1,124 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+  <link type="text/css" rel="stylesheet" href="css/main.css" rel="stylesheet"/>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-<!DOCTYPE HTML>
-
-	<head>
-		<title>CS 279 HW 2</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="css/main.css" />
-		<script
-		src="https://code.jquery.com/jquery-3.2.1.min.js"
-		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-		crossorigin="anonymous"></script>
-		
-		<!-- FIREBASE --> 
-		<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-app.js"></script>>
-		<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-database.js"></script>
-		
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		<script>
-		// Initialize Firebase
-		var config = {
-			apiKey: "AIzaSyBnc3yie_jteM5uHEHkOTfvUItxF4QmtuM",
-			authDomain: "uncanny-f64d1.firebaseapp.com",
-			databaseURL: "https://uncanny-f64d1.firebaseio.com",
-			projectId: "uncanny-f64d1",
-			storageBucket: "uncanny-f64d1.appspot.com",
-			messagingSenderId: "1000109360036"
-		};
-		firebase.initializeApp(config);
-		</script>
-		<!-- END FIREBASE SETUP -->
-		<script type="text/javascript"src="js/arrStat.js"></script>
-		<script type="text/javascript" src="js/uncanny-data.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-	</head>
-
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
 <body>
+  <div class="container row med col s12">
+    <h6><b>INSTRUCTIONS</b></h6>
+    <p>Please try to answer these questions as quickly and accurately as possible.</p>
+    <a class="next waves-effect waves-light btn-large" href="#">Start</a>
+  </div>
 
+  <div class="container row med col s12" style="display:none;">
+    <h6><b>MATH</b></h6>
+    <h5>Q1:</h5>
+    <p>Of the fruit that arrives at a cannery, 20 percent by weight is rejected before processing. Of the fruit that is processed, 15 percent by weight is rejected before canning. Of the fruit that arrives at the cannery, what percent by weight is canned?</p>
+    <form action="#">
+      <p>
+        <input data-key="a" name="group1" type="radio" id="test1" />
+        <label for="test1">A. 32%</label>
+      </p>
+      <p>
+        <input data-key="b" name="group1" type="radio" id="test2" />
+        <label for="test2">B. 35%</label>
+      </p>
+      <p>
+        <input data-key="c" name="group1" type="radio" id="test3"  />
+        <label for="test3">C. 65%</label>
+      </p>
+      <p>
+        <input data-key="d" name="group1" type="radio" id="test4"/>
+        <label for="test4">D. 65%</label>
+      </p>
+      <p>
+        <input data-key="e" name="group1" type="radio" id="test5"/>
+        <label for="test5">E. 70%</label>
+      </p>
+    </form>
+    <h1> </h1>
+    <a class="next waves-effect waves-light btn-large" type="submit" href="#">Submit</a>
+  </div>
 
-	<div id='footer'>
-		<div id='next' align='center' onclick="randomImg();">NEXT</div>
-	</div>
-	<div class='test'>
-	<div class='modal' id='info'>
-		<h2>Welcome to Uncanny Valley Simulator v2.0 ! ! !</h2>
-		<p>We're going to show you an image of a face on the screen.</p>
-		<p><strong>It's your job to move your mouse to one of the boxes in the corner that corresponds with whether you think the face is a robot or a human.</strong> When you've selected that, make sure to click the next button to get the next face.</p>
-		<p>Again, <strong>please try to move as quickly as possible. </strong> You may use a mouse or a trackpad.</p>
-		<p>Good luck!</p>
-	</div>
-	<img id="bg" src=""></img>>
-	<img id="face" src=""></img>
-	<input id="robot" class='btn' type="button" value="Inhuman" />
-	<input id="human" class='btn' type="button" value="Human" />
-	</div>
+  <div class="container row med col s12" style="display:none;">
+    <h6><b>MATH</b></h6>
+    <h5>Q2:</h5>
+    <p>If the length of a certain rectangle is 2 greater than the width of the rectangle, what is the perimeter of the rectangle?
+    <br>(1)The length of each diagonal of the rectangle is 10.
+    <br>(2)The area of the rectangular region is 48.
+    </p>
+    <form action="#">
+      <p>
+        <input data-key="a" name="group1" type="radio" id="test1" />
+        <label for="test1">A. Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient.</label>
+      </p>
+      <p>
+        <input data-key="b" name="group1" type="radio" id="test2" />
+        <label for="test2">B. Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient.</label>
+      </p>
+      <p>
+        <input data-key="c" name="group1" type="radio" id="test3"  />
+        <label for="test3">C. BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient.</label>
+      </p>
+      <p>
+        <input data-key="d" name="group1" type="radio" id="test4"/>
+        <label for="test4">D. EACH statement ALONE is sufficient.</label>
+      </p>
+      <p>
+        <input data-key="e" name="group1" type="radio" id="test5"/>
+        <label for="test5">E. Statements (1) and (2) TOGETHER are NOT sufficient.</label>
+      </p>
+    </form>
+    <h1> </h1>
+    <a class="next waves-effect waves-light btn-large" type="submit" href="#">Submit</a>
+  </div>
 
+  <div class="container row med col s12" style="display:none;">
+    <h6><b>MATH</b></h6>
+    <h5>Q3:</h5>
+    <img src="img/math_q3.png" style="max-width: 400px">
+    <p>In parallelogram PQRS shown, if PQ = 4 and QR = 6, what is the area of PQRS?
+    </p>
+    <form action="#">
+      <p>
+        <input data-key="a" name="group1" type="radio" id="test1" />
+        <label for="test1">A. 8</label>
+      </p>
+      <p>
+        <input data-key="b" name="group1" type="radio" id="test2" />
+        <label for="test2">B. 12</label>
+      </p>
+      <p>
+        <input data-key="c" name="group1" type="radio" id="test3"  />
+        <label for="test3">C. 24</label>
+      </p>
+      <p>
+        <input data-key="d" name="group1" type="radio" id="test4"/>
+        <label for="test4">D. 8√3</label>
+      </p>
+      <p>
+        <input data-key="e" name="group1" type="radio" id="test5"/>
+        <label for="test5">E. 12√3</label>
+      </p>
+    </form>
+    <h1> </h1>
+    <a class="next waves-effect waves-light btn-large" type="submit" href="#">Submit</a>
+  </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $('.next').click(function(){
+   $(this).parent().hide().next().show();//hide parent and show next
+ });
+</script>
 </body>
 </html>
